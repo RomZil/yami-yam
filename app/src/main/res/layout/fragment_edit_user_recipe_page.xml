@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3DAD5"
+    tools:context=".EditUserRecipePageFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="250dp"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="70sp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/recipeTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8sp"
+                    android:layout_marginTop="10dp"
+                    android:text="Recipe name:"
+                    android:textSize="25sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/styleNameEt"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="210dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:startIconDrawable="@drawable/ic_baseline_mode_edit_24">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/nameEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Name Recipe"
+                        android:required="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="250dp"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/avatarImg"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="25sp"
+                    android:layout_weight="1"
+                    android:isScrollContainer="false"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/meal" />
+
+                <ImageButton
+                    android:id="@+id/gallerybutton"
+                    android:layout_width="69dp"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="bottom|right"
+                    android:src="@drawable/ic_baseline_add_box_24" />
+
+                <ImageButton
+                    android:id="@+id/camerabutton"
+                    android:layout_width="70dp"
+                    android:layout_height="59dp"
+                    android:layout_gravity="bottom|right"
+                    android:layout_weight="1"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_baseline_add_a_photo_" />
+                <!--                </FrameLayout>-->
+            </LinearLayout>
+
+            <Space
+                android:layout_width="250dp"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15sp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8sp"
+                        android:text="Ingredients:"
+                        android:textSize="21sp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:startIconDrawable="@drawable/ic_baseline_mode_edit_24">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ingredientsEt"
+                            android:layout_width="336dp"
+                            android:layout_height="126dp"
+                            android:hint="Ingredients" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15sp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8sp"
+                    android:text="Instructions:"
+                    android:textSize="21sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:startIconDrawable="@drawable/ic_baseline_mode_edit_24">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/instructionsEt"
+                        android:layout_width="336dp"
+                        android:layout_height="126dp"
+                        android:hint="Instructions" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="250dp"
+                android:layout_height="35dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/saveBtn"
+                    android:layout_width="195dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="110sp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#D5B895"
+                    android:text="Save"
+                    app:cornerRadius="@dimen/activity_horizontal_margin" />
+
+                <Button
+                    android:id="@+id/cancellBtn"
+                    android:layout_width="195dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="110sp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#D5B895"
+                    android:text="Go Back"
+                    app:cornerRadius="@dimen/activity_horizontal_margin" />
+            </LinearLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+</FrameLayout>
